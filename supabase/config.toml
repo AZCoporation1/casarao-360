@@ -1,0 +1,7 @@
+# Central Casarão 360 — Supabase CLI config
+# ÚNICO projeto autorizado. A ref antiga bqdhvpvtzemjsbnbgryo é OBSOLETA e PROIBIDA.
+# Regra do projeto: SQL é aplicado via Management API (body JSON UTF-8) e registrado
+# em supabase_migrations.schema_migrations — NUNCA `supabase db push` cego e NUNCA
+# pipe de SQL via PowerShell (causa raiz do incidente de mojibake corrigido em 00020).
+# Ver docs/migration-ledger-reconciliation.md.
+project_id = "xhemqctqilpfjycesusr"

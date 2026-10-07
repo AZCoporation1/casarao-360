@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#150c07"/>
+      <stop offset="0.55" stop-color="#0d0805"/>
+      <stop offset="1" stop-color="#090706"/>
+    </linearGradient>
+    <radialGradient id="ember" cx="0.5" cy="1.05" r="0.9">
+      <stop offset="0" stop-color="#B32616" stop-opacity="0.5"/>
+      <stop offset="0.45" stop-color="#B32616" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#B32616" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberHalo" cx="0.62" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8E7C9" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#F8E7C9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A2414" stop-opacity="0"/>
+      <stop offset="1" stop-color="#4A2414" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.97 0 0 0 0 0.9 0 0 0 0 0.78 0 0 0 0.05 0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#ember)"/>
+  <rect width="800" height="500" fill="url(#amberHalo)"/>
+
+  <!-- Luzes de palco -->
+  <polygon points="150,-10 90,300 330,300" fill="url(#beam)"/>
+  <polygon points="620,-10 470,320 760,320" fill="url(#beam)"/>
+
+  <!-- Motivo fantasma (textura de fundo) -->
+  <g opacity="0.06" transform="translate(400 250) scale(2.6) translate(-400 -250)" stroke="#F8E7C9" fill="none">
+    
+  <ellipse cx="540" cy="330" rx="150" ry="26" fill="#F8E7C9" fill-opacity="0.06" stroke="none"/>
+  <circle cx="540" cy="140" r="34" stroke="#F8E7C9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <g stroke="#F8E7C9" stroke-width="2.5" stroke-opacity="0.7">
+    <line x1="516" y1="128" x2="564" y2="128"/><line x1="510" y1="140" x2="570" y2="140"/><line x1="516" y1="152" x2="564" y2="152"/>
+  </g>
+  <path d="M540 174 l0 132 m-42 24 q42 -26 84 0" stroke="#F8E7C9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M506 152 l-56 40" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  
+
+  <!-- Motivo principal -->
+  <g filter="url(#glow)">
+    
+  <ellipse cx="540" cy="330" rx="150" ry="26" fill="#F8E7C9" fill-opacity="0.06" stroke="none"/>
+  <circle cx="540" cy="140" r="34" stroke="#F8E7C9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <g stroke="#F8E7C9" stroke-width="2.5" stroke-opacity="0.7">
+    <line x1="516" y1="128" x2="564" y2="128"/><line x1="510" y1="140" x2="570" y2="140"/><line x1="516" y1="152" x2="564" y2="152"/>
+  </g>
+  <path d="M540 174 l0 132 m-42 24 q42 -26 84 0" stroke="#F8E7C9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M506 152 l-56 40" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <circle cx="587.1" cy="153.7" r="1.6" fill="#F97316" opacity="0.51"/><circle cx="540.4" cy="267.9" r="2.1" fill="#F59E0B" opacity="0.32"/><circle cx="140.2" cy="135.1" r="2.4" fill="#F59E0B" opacity="0.19"/><circle cx="188.8" cy="123.6" r="1.7" fill="#F97316" opacity="0.50"/><circle cx="741.6" cy="127.9" r="3.0" fill="#F97316" opacity="0.15"/><circle cx="707.5" cy="137.0" r="2.4" fill="#F97316" opacity="0.30"/><circle cx="88.8" cy="377.2" r="1.8" fill="#F97316" opacity="0.40"/><circle cx="541.1" cy="387.2" r="1.1" fill="#F97316" opacity="0.35"/><circle cx="653.1" cy="227.2" r="2.6" fill="#F97316" opacity="0.21"/><circle cx="347.2" cy="301.2" r="2.2" fill="#F97316" opacity="0.27"/><circle cx="718.9" cy="432.4" r="0.9" fill="#F59E0B" opacity="0.53"/><circle cx="757.0" cy="432.2" r="1.0" fill="#F97316" opacity="0.41"/><circle cx="303.9" cy="242.2" r="3.0" fill="#F59E0B" opacity="0.14"/><circle cx="615.0" cy="290.2" r="2.7" fill="#F97316" opacity="0.28"/><circle cx="359.3" cy="138.6" r="2.1" fill="#F97316" opacity="0.48"/><circle cx="739.0" cy="226.9" r="2.2" fill="#F97316" opacity="0.50"/><circle cx="289.5" cy="307.2" r="2.3" fill="#F59E0B" opacity="0.52"/><circle cx="239.9" cy="333.2" r="1.7" fill="#F97316" opacity="0.46"/><circle cx="272.3" cy="282.0" r="2.2" fill="#F59E0B" opacity="0.47"/><circle cx="522.3" cy="190.2" r="1.9" fill="#F97316" opacity="0.39"/><circle cx="458.8" cy="402.6" r="2.3" fill="#F59E0B" opacity="0.39"/><circle cx="404.0" cy="434.1" r="1.0" fill="#F97316" opacity="0.56"/><circle cx="653.5" cy="285.8" r="1.9" fill="#F97316" opacity="0.40"/><circle cx="356.1" cy="373.5" r="1.7" fill="#F59E0B" opacity="0.31"/><circle cx="474.1" cy="389.9" r="0.9" fill="#F97316" opacity="0.35"/><circle cx="743.0" cy="300.6" r="2.3" fill="#F97316" opacity="0.56"/>
+
+  <rect width="800" height="500" fill="url(#floor)"/>
+  <rect width="800" height="500" filter="url(#grain)"/>
+
+  <!-- Moldura e assinatura da casa -->
+  <rect x="14" y="14" width="772" height="472" rx="14" fill="none" stroke="#F8E7C9" stroke-opacity="0.14" stroke-width="1.5"/>
+  <g font-family="Montserrat, Arial, sans-serif">
+    <text x="40" y="448" fill="#F8E7C9" fill-opacity="0.85" font-size="19" font-weight="700" letter-spacing="6">O CASARÃO</text>
+    <text x="40" y="468" fill="#F59E0B" fill-opacity="0.7" font-size="10.5" font-weight="600" letter-spacing="4.2">EXPERIÊNCIAS AO VIVO</text>
+  </g>
+</svg>

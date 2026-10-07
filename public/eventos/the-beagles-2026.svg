@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#150c07"/>
+      <stop offset="0.55" stop-color="#0d0805"/>
+      <stop offset="1" stop-color="#090706"/>
+    </linearGradient>
+    <radialGradient id="ember" cx="0.5" cy="1.05" r="0.9">
+      <stop offset="0" stop-color="#B32616" stop-opacity="0.5"/>
+      <stop offset="0.45" stop-color="#B32616" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#B32616" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberHalo" cx="0.62" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8E7C9" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#F8E7C9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A2414" stop-opacity="0"/>
+      <stop offset="1" stop-color="#4A2414" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.97 0 0 0 0 0.9 0 0 0 0 0.78 0 0 0 0.05 0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#ember)"/>
+  <rect width="800" height="500" fill="url(#amberHalo)"/>
+
+  <!-- Luzes de palco -->
+  <polygon points="150,-10 90,300 330,300" fill="url(#beam)"/>
+  <polygon points="620,-10 470,320 760,320" fill="url(#beam)"/>
+
+  <!-- Motivo fantasma (textura de fundo) -->
+  <g opacity="0.06" transform="translate(400 250) scale(2.6) translate(-400 -250)" stroke="#F8E7C9" fill="none">
+    
+  <circle cx="530" cy="215" r="96" stroke="#F8E7C9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="530" cy="215" r="70" stroke="#F8E7C9" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-opacity="0.5" stroke-width="2.5"/>
+  <circle cx="530" cy="215" r="52" stroke="#F8E7C9" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-opacity="0.5" stroke-width="2.5"/>
+  <circle cx="530" cy="215" r="30" stroke="#F59E0B" stroke-width="6" fill="#B32616" fill-opacity="0.65"/>
+  <circle cx="530" cy="215" r="5" fill="#F8E7C9"/>
+  <g stroke="#F8E7C9" stroke-opacity="0.85" stroke-width="12" stroke-linecap="round">
+    <line x1="360" y1="368" x2="420" y2="352"/>
+    <line x1="450" y1="360" x2="510" y2="348"/>
+    <line x1="540" y1="356" x2="600" y2="346"/>
+    <line x1="630" y1="352" x2="690" y2="344"/>
+  </g>
+  </g>
+
+  
+
+  <!-- Motivo principal -->
+  <g filter="url(#glow)">
+    
+  <circle cx="530" cy="215" r="96" stroke="#F8E7C9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="530" cy="215" r="70" stroke="#F8E7C9" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-opacity="0.5" stroke-width="2.5"/>
+  <circle cx="530" cy="215" r="52" stroke="#F8E7C9" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-opacity="0.5" stroke-width="2.5"/>
+  <circle cx="530" cy="215" r="30" stroke="#F59E0B" stroke-width="6" fill="#B32616" fill-opacity="0.65"/>
+  <circle cx="530" cy="215" r="5" fill="#F8E7C9"/>
+  <g stroke="#F8E7C9" stroke-opacity="0.85" stroke-width="12" stroke-linecap="round">
+    <line x1="360" y1="368" x2="420" y2="352"/>
+    <line x1="450" y1="360" x2="510" y2="348"/>
+    <line x1="540" y1="356" x2="600" y2="346"/>
+    <line x1="630" y1="352" x2="690" y2="344"/>
+  </g>
+  </g>
+
+  <circle cx="534.3" cy="324.2" r="3.0" fill="#F59E0B" opacity="0.43"/><circle cx="331.4" cy="424.2" r="2.4" fill="#F59E0B" opacity="0.43"/><circle cx="610.4" cy="198.2" r="2.7" fill="#F97316" opacity="0.30"/><circle cx="307.1" cy="429.4" r="2.7" fill="#F59E0B" opacity="0.47"/><circle cx="570.3" cy="289.2" r="2.3" fill="#F97316" opacity="0.37"/><circle cx="522.2" cy="359.2" r="2.3" fill="#F59E0B" opacity="0.25"/><circle cx="698.3" cy="427.2" r="2.7" fill="#F97316" opacity="0.19"/><circle cx="487.6" cy="375.6" r="1.1" fill="#F97316" opacity="0.30"/><circle cx="372.2" cy="323.9" r="0.8" fill="#F59E0B" opacity="0.35"/><circle cx="327.8" cy="344.2" r="1.0" fill="#F97316" opacity="0.51"/><circle cx="143.2" cy="390.2" r="1.1" fill="#F59E0B" opacity="0.26"/><circle cx="220.6" cy="439.0" r="2.9" fill="#F59E0B" opacity="0.19"/><circle cx="695.6" cy="207.2" r="2.2" fill="#F97316" opacity="0.14"/><circle cx="317.1" cy="359.6" r="2.6" fill="#F97316" opacity="0.27"/><circle cx="127.3" cy="411.1" r="2.1" fill="#F97316" opacity="0.25"/><circle cx="421.8" cy="362.8" r="2.0" fill="#F59E0B" opacity="0.45"/><circle cx="349.4" cy="310.5" r="1.4" fill="#F97316" opacity="0.39"/><circle cx="152.3" cy="266.9" r="3.0" fill="#F97316" opacity="0.12"/><circle cx="286.2" cy="197.6" r="2.8" fill="#F97316" opacity="0.13"/><circle cx="300.0" cy="269.5" r="2.0" fill="#F97316" opacity="0.19"/><circle cx="355.7" cy="353.1" r="1.3" fill="#F97316" opacity="0.29"/><circle cx="349.1" cy="378.4" r="2.7" fill="#F97316" opacity="0.13"/><circle cx="228.9" cy="263.3" r="2.4" fill="#F97316" opacity="0.17"/><circle cx="77.4" cy="376.4" r="1.8" fill="#F59E0B" opacity="0.35"/><circle cx="670.2" cy="291.8" r="1.8" fill="#F97316" opacity="0.48"/><circle cx="196.2" cy="318.7" r="2.8" fill="#F59E0B" opacity="0.35"/>
+
+  <rect width="800" height="500" fill="url(#floor)"/>
+  <rect width="800" height="500" filter="url(#grain)"/>
+
+  <!-- Moldura e assinatura da casa -->
+  <rect x="14" y="14" width="772" height="472" rx="14" fill="none" stroke="#F8E7C9" stroke-opacity="0.14" stroke-width="1.5"/>
+  <g font-family="Montserrat, Arial, sans-serif">
+    <text x="40" y="448" fill="#F8E7C9" fill-opacity="0.85" font-size="19" font-weight="700" letter-spacing="6">O CASARÃO</text>
+    <text x="40" y="468" fill="#F59E0B" fill-opacity="0.7" font-size="10.5" font-weight="600" letter-spacing="4.2">EXPERIÊNCIAS AO VIVO</text>
+  </g>
+</svg>

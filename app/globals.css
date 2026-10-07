@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-preto-carvao: #090706;
+  --color-vermelho-brasa: #B32616;
+  --color-laranja-fogo: #F97316;
+  --color-ambar-premium: #F59E0B;
+  --color-creme-gastronomico: #F8E7C9;
+  --color-verde-oliva: #3F6B2F;
+  --color-marrom-madeira: #4A2414;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-preto-carvao);
+    --foreground: var(--color-creme-gastronomico);
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), 'Montserrat', system-ui, sans-serif;
+}
+
+.glass-card {
+  @apply bg-preto-carvao/60 backdrop-blur-md border border-marrom-madeira/30 shadow-2xl;
+}
+
+/* =============================================
+   Mapa do Salão — efeitos premium (sóbrios, §4)
+   ============================================= */
+
+/* Entrada das mesas no primeiro render (stagger via animation-delay inline).
+   Aplicado em um wrapper interno — o botão posicionado mantém os transforms
+   de centralização/hover livres. */
+@keyframes table-pop {
+  from { opacity: 0; transform: scale(0.55); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-table-pop {
+  animation: table-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Mesas combináveis com a seleção atual — anel esmeralda "respirando" */
+@keyframes join-hint {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(63, 107, 47, 0.0), 0 0 12px 2px rgba(63, 107, 47, 0.35); }
+  50%      { box-shadow: 0 0 0 4px rgba(63, 107, 47, 0.25), 0 0 20px 6px rgba(63, 107, 47, 0.55); }
+}
+.animate-join-hint {
+  animation: join-hint 1.6s ease-in-out infinite;
+}
+
+/* Mesa selecionada — brilho quente da marca */
+@keyframes selected-glow {
+  0%, 100% { box-shadow: 0 0 14px 3px rgba(249, 115, 22, 0.45); }
+  50%      { box-shadow: 0 0 22px 7px rgba(249, 115, 22, 0.65); }
+}
+.animate-selected-glow {
+  animation: selected-glow 2.2s ease-in-out infinite;
+}
+
+/* Luz do palco — oscilação sutil */
+@keyframes stage-glow {
+  0%, 100% { box-shadow: 0 6px 24px -6px rgba(249, 115, 22, 0.25); }
+  50%      { box-shadow: 0 8px 34px -4px rgba(249, 115, 22, 0.45); }
+}
+.animate-stage-glow {
+  animation: stage-glow 4s ease-in-out infinite;
+}
+
+/* Acessibilidade: respeita usuários com movimento reduzido (§90) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-table-pop,
+  .animate-join-hint,
+  .animate-selected-glow,
+  .animate-stage-glow {
+    animation: none;
+  }
+}
